@@ -1,0 +1,629 @@
+*{
+  background-color: rgb(3, 39, 15);  /* 섹션의 배경색을 RGB 값으로 설정 */
+  margin: 0px;
+}
+/*1번/ 큰사진1*/
+.main{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%);
+  top: 0%;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 검은색 */
+}
+
+#fix {
+  width: 1420px;  /* 섹션의 너비를 1420px로 설정 */
+  height: auto;
+  margin: 0 auto;  /* 섹션을 화면 중앙에 배치 */
+  padding: 20px;  /* 섹션 내부의 여백 설정 */
+  background-color: rgb(3, 39, 15);  /* 섹션의 배경색을 RGB 값으로 설정 */
+  border: 1px solid #cccccc00;  /* 섹션의 테두리 설정 */
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 섹션에 그림자 효과 추가 */
+  color: white;
+}
+
+.bodys {
+  width: 964px;  /* 섹션의 너비를 963px로 설정 */
+  height: auto;
+  margin-left: 110px;  /* 섹션을 화면 중앙에 배치 */
+  padding: 20px;  /* 섹션 내부의 여백 설정 */
+  background-color: rgb(3, 39, 15);  /* 섹션의 배경색을 RGB 값으로 설정 */
+  border: 1px solid #cccccc00;  /* 섹션의 테두리 설정 */
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 섹션에 그림자 효과 추가 */
+  color: white;}
+  
+/*----- (이거 메인 사진 위 글)-------*/
+.content {
+  position: absolute;
+  top: 0%; /* 원하는 세로 위치 */
+  left: 46%;
+  transform: translateX(-50%);
+  text-align: left;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0); /* 반투명한 검은색 */
+  padding: 20px;
+
+  width: 100%; /* 원하는 너비 설정 */
+  max-width: 1450px; /* 최대 너비 설정 */
+}
+
+.content h1 {
+  /* h1 요소에 대한 스타일 */
+  position: absolute; /* 절대 위치 지정 */
+  top: 390px; /* 부모 요소의 중앙에 위치 */
+  left: 17.5%; /* 부모 요소의 중앙에 위치 */
+  max-width: 80%; /* 최대 너비 설정 */
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px; /* 예시로 추가한 마진 */
+  background-color: #cccccc00;
+  color: #ccc;
+}
+
+  .content p{
+  position: absolute; /* 절대 위치 지정 */
+  display: flex;
+  top: 550px; /* 부모 요소의 중앙에 위치 */
+  left: 50%; /* 부모 요소의 중앙에 위치 */
+  transform: translate(-65%, -35%); /* 가운데 정렬을 위한 변환 */
+  max-width: 80%; /* 최대 너비 설정 */
+  background-color: #cccccc00;
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.uptitle {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: sticky;
+    top: 0; /* 상단에 고정될 위치 */
+    z-index: 100;
+    background-color: #ffffff00; /* 이미지가 다른 콘텐츠를 가리지 않도록 배경색 설정 */
+    padding-top: 15px 20px; /* 상단 여백 추가 */
+    padding-left: -40px;
+    font-size: 42px;
+    color: #ccc;
+    backdrop-filter: blur(8px); /* 블러 효과 */
+    -webkit-backdrop-filter: blur(8px); /* Safari 지원을 위한 접두사 */
+    font-weight: bolder;
+  }
+
+  .ticon{
+    width: 75px;
+    height: auto;
+    background-color: #cccccc00;
+  }
+
+/*----- br대체, 텍스트박스-------*/
+.blankbox{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0%);
+  width: auto;
+  height: 200px;
+  background-color: rgb(3, 39, 15); 
+}
+
+/*----- ↑ 기본고정 // ↓ first 테이블-------*/
+/*사진 슬라이드1 먼저*/
+#slider{
+  display: flex;
+  justify-content: center;
+  height: 610px;
+}
+
+#imageContainer1{
+  width: 440px;
+  height: 610px;
+  display: flex;
+  overflow: hidden;
+}
+
+#imageSlider1{
+  width: 440px;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+#interface{
+  /*background-color: bisque;*/
+  width: 440px;
+  height: 610px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #9b2c2c00;
+}
+
+#bottomBTN{
+  /*background-color: blueviolet;*/
+  display: flex;
+  width: 130px;
+  height: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cccccc00;
+  
+}
+
+#bottomBTN button{
+  padding: 3px 16px;
+  border: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+#bottomBTN button:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*글 테이블*/
+.table1 {
+    width: 964px;  /* 테이블의 넓이를 부모 요소의 100%로 설정 */
+    border-collapse: collapse;  /* 테두리가 겹치지 않도록 설정 */
+    margin-bottom: 30px;  /* 테이블과 아래 콘텐츠 간의 간격 설정 */
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.table1 th, .table1 td {
+    width: 482px;
+    border: 1px solid #dddddd00;  /* 셀의 테두리 설정 */
+    padding: 8px;  /* 셀 내부의 여백 설정 */
+    text-align: left;  /* 텍스트 정렬 설정 */
+    margin: 0px; /*텍스트 맨 위에 선에 딱 맞추고 싶은데 왜 안맞춰짐;;*/
+    color: rgb(255, 255, 255);  /* 셀 텍스트 색상을 검정색으로 설정 */
+    background-color: rgb(3, 39, 15);  /* 셀 배경색을 흰색으로 설정 */
+}
+
+/*----- ↑ first 테이블 // ↓ second 테이블-------*/
+.table2 {
+  width: 963px;  /* 테이블의 넓이를 부모 요소의 100%로 설정 */
+  border-collapse: collapse;  /* 테두리가 겹치지 않도록 설정 */
+  margin-bottom: 20px;  /* 테이블과 아래 콘텐츠 간의 간격 설정 */
+  border-collapse: collapse; /* 테두리 겹침을 해제하여 간격 설정 가능 */
+  /*border-bottom: 30px solid transparent;*/
+  /*border-spacing: 35px; 셀 간격 (gutter) 설정 */
+}
+
+.table2 td {
+  width: 482px;
+  height: auto;
+  border: 1px solid #dddddd00;  /* 셀의 테두리 설정 */
+  padding: 8px;  /* 셀 내부의 여백 설정 */
+  text-align: left;  /* 텍스트 정렬 설정 */
+  color: rgb(255, 255, 255);  /* 셀 텍스트 색상을 검정색으로 설정 */
+  background-color: rgb(3, 39, 15);  /* 셀 배경색을 흰색으로 설정 */
+}
+
+.ta2title{
+  margin-left: 35px;
+  width: 380px;
+  font-size: 22px;
+  background-color: #cccccc00;
+}
+
+.ta2text{
+  margin: 35px;
+  width: 380px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.table2image{
+  max-width: 300px; /*기본은 290px이지만, 일단 full cell도 만족스러워서 수정하지 않음*/
+  height: auto;
+  overflow: hidden; /* 내부 요소가 경계를 벗어나지 않도록 설정 */
+  border-radius: 230px; /* 테두리를 둥글게 만듦 */
+  display: block;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* transform 속성 추가 */ /* 테두리 변화를 부드럽게 만들기 위한 transition 추가 */
+}
+
+.table2image:hover {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* 마우스 호버 시 빛나는 효과 설정 */
+  transform: scale(1.05);
+}
+
+
+/*----- ↑ second 테이블 // ↓ third 그리드-------*/
+.why{
+  width: 700px;
+  padding-bottom: 15px;
+}
+
+.whytexts{
+  width: 700px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.whypoints{
+  width: 700px;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/*----------------역사-----------------------*/
+.firsthistory {
+  width: 700px; /* 적절한 너비 설정 */
+  padding-top: 10px;
+  box-sizing: border-box; /* 패딩을 요소의 전체 너비에 포함시킵니다 */
+  font-size: 13px;
+  line-height: 2;
+}
+.titlehistory {
+  width: 700px; /* 적절한 너비 설정 */
+  box-sizing: border-box; /* 패딩을 요소의 전체 너비에 포함시킵니다 */
+
+}
+.tophistory {
+  width: 700px; /* 적절한 너비 설정 */
+  box-sizing: border-box; /* 패딩을 요소의 전체 너비에 포함시킵니다 */
+  font-size: 24px;
+}
+
+.HISTORY{
+  width: 700px; /* 적절한 너비 설정 */
+}
+
+
+/*----------------레퍼런스-----------------------*/
+
+
+
+/*글 테이블*/
+.table1 {
+    width: 964px;  /* 테이블의 넓이를 부모 요소의 100%로 설정 */
+    border-collapse: collapse;  /* 테두리가 겹치지 않도록 설정 */
+    margin-bottom: 30px;  /* 테이블과 아래 콘텐츠 간의 간격 설정 */
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.table1 th, .table1 td {
+    width: 482px;
+    border: 1px solid #dddddd00;  /* 셀의 테두리 설정 */
+    padding: 8px;  /* 셀 내부의 여백 설정 */
+    text-align: left;  /* 텍스트 정렬 설정 */
+    margin: 0px; /*텍스트 맨 위에 선에 딱 맞추고 싶은데 왜 안맞춰짐;;*/
+    color: rgb(255, 255, 255);  /* 셀 텍스트 색상을 검정색으로 설정 */
+    background-color: rgb(3, 39, 15);  /* 셀 배경색을 흰색으로 설정 */
+}
+
+/*인공지능 메인사진*/
+.categoryp {
+  width: 200%; /* 부모 요소의 너비를 100%로 설정하여 가로 전체를 차지하도록 합니다. */
+  text-align: center; /* 내부 컨텐츠를 가로 중앙으로 정렬합니다. */
+}
+
+.main2 {
+  max-width: 100%; /* 최대 너비를 1920px로 제한하지 않고, 부모 요소에 맞춰 자동으로 조정하도록 합니다. */
+  height: auto; /* 높이를 자동으로 조정하여 비율을 유지합니다. */
+  display: inline-block; /* 인라인 요소로 설정하여 텍스트와 동일한 라인에 정렬될 수 있도록 합니다. */
+  text-align: center; /* 이미지 내부의 텍스트를 왼쪽 정렬합니다. */
+  margin: 0; /* 기본 마진을 없앱니다. */
+  padding: 0; /* 기본 패딩을 없앱니다. */
+}
+
+
+/*----- 인공지능-------*/
+.conversation {
+  max-width: 1000px;
+  margin-left: 0;
+  background-color: rgb(3, 39, 15);
+/*  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 40px;
+  max-width: 80%;
+  word-wrap: break-word;
+  background-color: rgb(72, 89, 77);
+}
+
+.person-a {
+  background-color: rgb(72, 89, 77);
+  border-radius: 10px 10px 10px 10px;
+  float: left;
+  font-size: 12px;
+  line-height: 1.9;
+  padding-top: 6px;
+  padding-bottom: 10px;
+
+}
+
+.person-a p {
+  margin: 5px;
+}
+
+.person-b {
+  background-color: rgb(3, 39, 15);
+  border-radius: 18px 18px 18px 18px;
+  float: right;
+  font-size: 16px;
+  line-height: 1.9;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  text-align: right;
+}
+
+.person-b p {
+  margin: 5px;
+}
+
+.aiBold{
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: rgb(72, 89, 77);
+}
+
+.ai{
+  font-size: 13px;
+  background-color: rgb(72, 89, 77);
+}
+
+
+/*인공지능 사진*/
+
+.profile-img{
+width: 70px;
+height: 70px;
+border-radius: 230%; 
+top: 0;
+background-color: rgba(72, 89, 77, 0);
+}
+
+.profile-img2{
+  width: 70px;
+  height: 70px;
+  border-radius: 230%; 
+  top: 0;
+  align-items: right;
+   }
+
+/* --------------- 인공지능 슬라이드 ----------*/
+#aiContainer {
+  position: absolute;
+  width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 300px;
+  background-color: #9b2c2c00;
+
+}
+
+#aislider {
+  display: flex;
+  transition: transform 0.5s ease;
+  background-color: #9b2c2c00;
+
+}
+
+.aiimageSlider {
+  min-width: 100%;
+  background-color: #9b2c2c00;
+  display: flex;
+}
+
+#aiinterface {
+  position: relative;
+  bottom: 10px;
+  width: 600px;
+  height: 310px;
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  pointer-events: none; /* 인터페이스가 이미지 슬라이드 위에 겹치게 하기 위해 추가 */
+  background-color: #9b2c2c00;
+}
+
+#aibottomBTN {
+  display: flex;
+  padding-top: 290px;
+  padding-left: 280px;
+  width: 80px;
+  height: 20px;
+  gap: 10px;
+  pointer-events: auto; /* 버튼 클릭을 허용하기 위해 추가 */
+  background-color: #9b2c2c00;
+  
+}
+
+#aibottomBTN button {
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 10px;
+  height: 3px;
+  cursor: pointer;
+}
+
+#aibottomBTN button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*----- ↑ 아마 인공지능이나 레퍼런스 // ↓ sidebar-------*/
+
+
+/*사진 슬라이드1 먼저*/
+#slider{
+  display: flex;
+  justify-content: center;
+  height: 610px;
+}
+
+#imageContainer1{
+  width: 440px;
+  height: 610px;
+  display: flex;
+  overflow: hidden;
+}
+
+#imageSlider1{
+  width: 440px;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+#interface{
+  /*background-color: bisque;*/
+  width: 440px;
+  height: 610px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #9b2c2c00;
+}
+
+#bottomBTN{
+  /*background-color: blueviolet;*/
+  display: flex;
+  width: 130px;
+  height: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cccccc00;
+  
+}
+
+#bottomBTN button{
+  padding: 3px 16px;
+  border: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+#bottomBTN button:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*글 테이블*/
+.table1 {
+    width: 964px;  /* 테이블의 넓이를 부모 요소의 100%로 설정 */
+    border-collapse: collapse;  /* 테두리가 겹치지 않도록 설정 */
+    margin-bottom: 30px;  /* 테이블과 아래 콘텐츠 간의 간격 설정 */
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.table1 th, .table1 td {
+    width: 482px;
+    border: 1px solid #dddddd00;  /* 셀의 테두리 설정 */
+    padding: 8px;  /* 셀 내부의 여백 설정 */
+    text-align: left;  /* 텍스트 정렬 설정 */
+    margin: 0px; /*텍스트 맨 위에 선에 딱 맞추고 싶은데 왜 안맞춰짐;;*/
+    color: rgb(255, 255, 255);  /* 셀 텍스트 색상을 검정색으로 설정 */
+    background-color: rgb(3, 39, 15);  /* 셀 배경색을 흰색으로 설정 */
+}
+
+
+
+/* 사이드바 스타일 */
+.sidebar {
+  width: 180px;
+  position: fixed;
+  top: 0px;
+  right: calc((100% - 1420px) / 2); /* 화면의 가운데에서 1420px 안에 고정 */
+
+  padding-top: 500px;
+  background-color: rgba(3, 39, 15, 0);
+  color: white;
+  height: 100%;
+  font-size: 12px;
+  overflow-y: auto;
+  /*box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);*/
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: rgba(3, 39, 15, 0);
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+  background-color: rgba(3, 39, 15, 0);
+}
+
+.sidebar ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 628px;
+  transform: translateY(-50%);
+  width: 2.5px; /* 세로 선의 너비 */
+  height: 256px; /* 세로 선의 높이를 부모 요소에 맞춤 */
+  background-color: #ffffff09; /* 세로 선의 색상 */
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background-color: rgba(3, 39, 15, 0);
+}
+
+.sidebar ul li a:hover {
+  background-color: #ddddddc5;
+  color: rgb(3, 39, 15);
+}
+
+.sidebar ul li a.active {
+  background-color: rgba(104, 142, 116, 0.63); /* 현재 활성화된 링크 배경색 */
+  color: white;
+  font-size: 13.5px;
+  font-weight: bold;
+}
+
+/* --------------- 왼편 흐르는 친구 ----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
